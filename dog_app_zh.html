@@ -13455,6 +13455,71 @@ There are 836 test dog images.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dog_faces_count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">face_detector</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dog_files_short</span><span class="p">])</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">dog_faces_count</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>11
+0.11
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">human_faces_count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">face_detector</span><span class="p">,</span> <span class="n">human_files_short</span><span class="p">)))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">human_faces_count</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
@@ -13502,7 +13567,7 @@ There are 836 test dog images.
 <h3 id="&#38382;&#39064;-2:"><strong>&#38382;&#39064; 2:</strong><a class="anchor-link" href="#&#38382;&#39064;-2:">&#182;</a></h3><p>就算法而言，该算法成功与否的关键在于，用户能否提供含有清晰面部特征的人脸图像。
 那么你认为，这样的要求在实际使用中对用户合理吗？如果你觉得不合理，你能否想到一个方法，即使图像中并没有清晰的面部特征，也能够检测到人脸？</p>
 <p><strong>回答:</strong></p>
-<h4 id="&#25105;&#35748;&#20026;&#36825;&#26679;&#30340;&#35201;&#27714;&#19981;&#21512;&#29702;&#65292;&#22914;&#26524;&#21482;&#26159;&#35201;&#27714;&#26816;&#27979;&#25152;&#32473;&#30340;&#22270;&#29255;&#20013;&#26159;&#21542;&#26377;&#20154;&#33080;&#65292;&#27604;&#36215;&#25972;&#24352;&#20154;&#33080;&#20063;&#21487;&#20197;&#26816;&#27979;&#26159;&#21542;&#26377;&#23616;&#37096;&#30340;&#20154;&#33080;&#29305;&#24449;&#65292;&#22914;&#26159;&#21542;&#26377;&#20154;&#30340;&#20116;&#23448;">&#25105;&#35748;&#20026;&#36825;&#26679;&#30340;&#35201;&#27714;&#19981;&#21512;&#29702;&#65292;&#22914;&#26524;&#21482;&#26159;&#35201;&#27714;&#26816;&#27979;&#25152;&#32473;&#30340;&#22270;&#29255;&#20013;&#26159;&#21542;&#26377;&#20154;&#33080;&#65292;&#27604;&#36215;&#25972;&#24352;&#20154;&#33080;&#20063;&#21487;&#20197;&#26816;&#27979;&#26159;&#21542;&#26377;&#23616;&#37096;&#30340;&#20154;&#33080;&#29305;&#24449;&#65292;&#22914;&#26159;&#21542;&#26377;&#20154;&#30340;&#20116;&#23448;<a class="anchor-link" href="#&#25105;&#35748;&#20026;&#36825;&#26679;&#30340;&#35201;&#27714;&#19981;&#21512;&#29702;&#65292;&#22914;&#26524;&#21482;&#26159;&#35201;&#27714;&#26816;&#27979;&#25152;&#32473;&#30340;&#22270;&#29255;&#20013;&#26159;&#21542;&#26377;&#20154;&#33080;&#65292;&#27604;&#36215;&#25972;&#24352;&#20154;&#33080;&#20063;&#21487;&#20197;&#26816;&#27979;&#26159;&#21542;&#26377;&#23616;&#37096;&#30340;&#20154;&#33080;&#29305;&#24449;&#65292;&#22914;&#26159;&#21542;&#26377;&#20154;&#30340;&#20116;&#23448;">&#182;</a></h4>
+<h4 id="&#25105;&#35748;&#20026;&#36825;&#26679;&#30340;&#35201;&#27714;&#19981;&#21512;&#29702;&#65292;&#22914;&#26524;&#21482;&#26159;&#35201;&#27714;&#26816;&#27979;&#25152;&#32473;&#30340;&#22270;&#29255;&#20013;&#26159;&#21542;&#26377;&#20154;&#33080;&#65292;&#27604;&#36215;&#25972;&#24352;&#20154;&#33080;&#20063;&#21487;&#20197;&#26816;&#27979;&#26159;&#21542;&#26377;&#23616;&#37096;&#30340;&#20154;&#33080;&#29305;&#24449;&#65292;&#22914;&#26159;&#21542;&#26377;&#20154;&#30340;&#20116;&#23448;&#65292;&#20551;&#22914;&#31639;&#27861;&#23545;&#20110;&#28165;&#26224;&#24230;&#36739;&#20026;&#25935;&#24863;&#65292;&#21487;&#20197;&#35843;&#25972;&#19979;&#30456;&#20851;&#30340;&#21442;&#25968;&#20351;&#24471;&#27169;&#22411;&#23545;&#20110;&#19981;&#22826;&#28165;&#26224;&#30340;&#38754;&#23380;&#20063;&#33021;&#35782;&#21035;&#20986;&#26469;">&#25105;&#35748;&#20026;&#36825;&#26679;&#30340;&#35201;&#27714;&#19981;&#21512;&#29702;&#65292;&#22914;&#26524;&#21482;&#26159;&#35201;&#27714;&#26816;&#27979;&#25152;&#32473;&#30340;&#22270;&#29255;&#20013;&#26159;&#21542;&#26377;&#20154;&#33080;&#65292;&#27604;&#36215;&#25972;&#24352;&#20154;&#33080;&#20063;&#21487;&#20197;&#26816;&#27979;&#26159;&#21542;&#26377;&#23616;&#37096;&#30340;&#20154;&#33080;&#29305;&#24449;&#65292;&#22914;&#26159;&#21542;&#26377;&#20154;&#30340;&#20116;&#23448;&#65292;&#20551;&#22914;&#31639;&#27861;&#23545;&#20110;&#28165;&#26224;&#24230;&#36739;&#20026;&#25935;&#24863;&#65292;&#21487;&#20197;&#35843;&#25972;&#19979;&#30456;&#20851;&#30340;&#21442;&#25968;&#20351;&#24471;&#27169;&#22411;&#23545;&#20110;&#19981;&#22826;&#28165;&#26224;&#30340;&#38754;&#23380;&#20063;&#33021;&#35782;&#21035;&#20986;&#26469;<a class="anchor-link" href="#&#25105;&#35748;&#20026;&#36825;&#26679;&#30340;&#35201;&#27714;&#19981;&#21512;&#29702;&#65292;&#22914;&#26524;&#21482;&#26159;&#35201;&#27714;&#26816;&#27979;&#25152;&#32473;&#30340;&#22270;&#29255;&#20013;&#26159;&#21542;&#26377;&#20154;&#33080;&#65292;&#27604;&#36215;&#25972;&#24352;&#20154;&#33080;&#20063;&#21487;&#20197;&#26816;&#27979;&#26159;&#21542;&#26377;&#23616;&#37096;&#30340;&#20154;&#33080;&#29305;&#24449;&#65292;&#22914;&#26159;&#21542;&#26377;&#20154;&#30340;&#20116;&#23448;&#65292;&#20551;&#22914;&#31639;&#27861;&#23545;&#20110;&#28165;&#26224;&#24230;&#36739;&#20026;&#25935;&#24863;&#65292;&#21487;&#20197;&#35843;&#25972;&#19979;&#30456;&#20851;&#30340;&#21442;&#25968;&#20351;&#24471;&#27169;&#22411;&#23545;&#20110;&#19981;&#22826;&#28165;&#26224;&#30340;&#38754;&#23380;&#20063;&#33021;&#35782;&#21035;&#20986;&#26469;">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13512,6 +13577,7 @@ There are 836 test dog images.
 <hr>
 <p><a id='Selection1'></a></p>
 <h3 id="&#36873;&#20570;&#65306;">&#36873;&#20570;&#65306;<a class="anchor-link" href="#&#36873;&#20570;&#65306;">&#182;</a></h3><p>我们建议在你的算法中使用opencv的人脸检测模型去检测人类图像，不过你可以自由地探索其他的方法，尤其是尝试使用深度学习来解决它:)。请用下方的代码单元来设计和测试你的面部监测算法。如果你决定完成这个_选做_任务，你需要报告算法在每一个数据集上的表现。</p>
+<p>这里尝试mtcnn，需要install，所以在review的时候可能要安装下</p>
 
 </div>
 </div>
@@ -13693,7 +13759,7 @@ There are 836 test dog images.
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Downloading data from https://github.com/fchollet/deep-learning-models/releases/download/v0.2/resnet50_weights_tf_dim_ordering_tf_kernels.h5
-102858752/102853048 [==============================] - 1s 0us/step
+102858752/102853048 [==============================] - 2s 0us/step
 </pre>
 </div>
 </div>
@@ -13821,7 +13887,42 @@ There are 836 test dog images.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dog_detect_humans</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">dog_detector</span><span class="p">,</span> <span class="n">human_files_short</span><span class="p">)))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">dog_detect_humans</span><span class="p">)</span>
+<span class="n">dog_detect_dogs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">dog_detector</span><span class="p">,</span> <span class="n">dog_files_short</span><span class="p">)))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">dog_detect_dogs</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.0
+1.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### TODO: 测试dog_detector函数在human_files_short和dog_files_short的表现</span>
@@ -13957,9 +14058,9 @@ There are 836 test dog images.
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 6680/6680 [01:14&lt;00:00, 89.31it/s] 
-100%|██████████| 835/835 [00:08&lt;00:00, 100.72it/s]
-100%|██████████| 836/836 [00:08&lt;00:00, 100.74it/s]
+<pre>100%|██████████| 6680/6680 [01:12&lt;00:00, 92.74it/s] 
+100%|██████████| 835/835 [00:07&lt;00:00, 105.96it/s]
+100%|██████████| 836/836 [00:07&lt;00:00, 106.99it/s]
 </pre>
 </div>
 </div>
@@ -13988,7 +14089,8 @@ There are 836 test dog images.
 <li>你可以尝试自己搭建一个卷积网络的模型，那么你需要回答你搭建卷积网络的具体步骤（用了哪些层）以及为什么这样搭建。</li>
 <li>你也可以根据上图提示的步骤搭建卷积网络，那么请说明为何如上的架构能够在该问题上取得很好的表现。</li>
 </ol>
-<p><strong>回答:</strong></p>
+<p><strong>回答:</strong> 1、conv2d：利用卷积（浓缩）提取特征 2、maxpooling：让模型取最大的一层，让模型更有侧重点（原理上也是根据权重来选择的），同时也可以提高效率 3、softmax：输出预测分类的概率；4、最后在测试集上得到1.9139%的准确率</p>
+<p>下方的可选题，数据增强的，训练了不知道怎么写预测的代码？</p>
 
 </div>
 </div>
@@ -14160,7 +14262,7 @@ Found 836 images belonging to 133 classes.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.callbacks</span> <span class="k">import</span> <span class="n">ModelCheckpoint</span>  
@@ -14195,33 +14297,33 @@ Found 836 images belonging to 133 classes.
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Train on 6680 samples, validate on 835 samples
 Epoch 1/5
-6660/6680 [============================&gt;.] - ETA: 0s - loss: 4.8815 - acc: 0.0078Epoch 00001: val_loss improved from inf to 4.85733, saving model to saved_models/weights.best.from_scratch.hdf5
-6680/6680 [==============================] - 20s 3ms/step - loss: 4.8814 - acc: 0.0079 - val_loss: 4.8573 - val_acc: 0.0156
+6660/6680 [============================&gt;.] - ETA: 0s - loss: 4.8816 - acc: 0.0096Epoch 00001: val_loss improved from inf to 4.84497, saving model to saved_models/weights.best.from_scratch.hdf5
+6680/6680 [==============================] - 22s 3ms/step - loss: 4.8815 - acc: 0.0097 - val_loss: 4.8450 - val_acc: 0.0144
 Epoch 2/5
-6660/6680 [============================&gt;.] - ETA: 0s - loss: 4.8290 - acc: 0.0164Epoch 00002: val_loss improved from 4.85733 to 4.82482, saving model to saved_models/weights.best.from_scratch.hdf5
-6680/6680 [==============================] - 19s 3ms/step - loss: 4.8290 - acc: 0.0163 - val_loss: 4.8248 - val_acc: 0.0144
+6660/6680 [============================&gt;.] - ETA: 0s - loss: 4.8301 - acc: 0.0125Epoch 00002: val_loss improved from 4.84497 to 4.82129, saving model to saved_models/weights.best.from_scratch.hdf5
+6680/6680 [==============================] - 19s 3ms/step - loss: 4.8300 - acc: 0.0124 - val_loss: 4.8213 - val_acc: 0.0204
 Epoch 3/5
-6660/6680 [============================&gt;.] - ETA: 0s - loss: 4.8070 - acc: 0.0165Epoch 00003: val_loss improved from 4.82482 to 4.81711, saving model to saved_models/weights.best.from_scratch.hdf5
-6680/6680 [==============================] - 19s 3ms/step - loss: 4.8070 - acc: 0.0165 - val_loss: 4.8171 - val_acc: 0.0180
+6660/6680 [============================&gt;.] - ETA: 0s - loss: 4.8118 - acc: 0.0168Epoch 00003: val_loss did not improve
+6680/6680 [==============================] - 19s 3ms/step - loss: 4.8113 - acc: 0.0169 - val_loss: 4.8349 - val_acc: 0.0096
 Epoch 4/5
-6660/6680 [============================&gt;.] - ETA: 0s - loss: 4.7985 - acc: 0.0194Epoch 00004: val_loss improved from 4.81711 to 4.80887, saving model to saved_models/weights.best.from_scratch.hdf5
-6680/6680 [==============================] - 19s 3ms/step - loss: 4.7985 - acc: 0.0193 - val_loss: 4.8089 - val_acc: 0.0144
+6660/6680 [============================&gt;.] - ETA: 0s - loss: 4.8023 - acc: 0.0186Epoch 00004: val_loss improved from 4.82129 to 4.80771, saving model to saved_models/weights.best.from_scratch.hdf5
+6680/6680 [==============================] - 19s 3ms/step - loss: 4.8023 - acc: 0.0186 - val_loss: 4.8077 - val_acc: 0.0144
 Epoch 5/5
-6660/6680 [============================&gt;.] - ETA: 0s - loss: 4.7936 - acc: 0.0218Epoch 00005: val_loss improved from 4.80887 to 4.80064, saving model to saved_models/weights.best.from_scratch.hdf5
-6680/6680 [==============================] - 19s 3ms/step - loss: 4.7936 - acc: 0.0219 - val_loss: 4.8006 - val_acc: 0.0204
+6660/6680 [============================&gt;.] - ETA: 0s - loss: 4.7954 - acc: 0.0182Epoch 00005: val_loss did not improve
+6680/6680 [==============================] - 19s 3ms/step - loss: 4.7955 - acc: 0.0181 - val_loss: 4.8213 - val_acc: 0.0156
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[35]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x7fb4e4053668&gt;</pre>
+<pre>&lt;keras.callbacks.History at 0x7f6757a6e588&gt;</pre>
 </div>
 
 </div>
@@ -14399,7 +14501,7 @@ Epoch 20/20
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 加载具有最好验证loss的模型</span>
@@ -14422,7 +14524,7 @@ Epoch 20/20
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 获取测试数据集中每一个图像所预测的狗品种的index</span>
@@ -14447,7 +14549,7 @@ Epoch 20/20
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Test accuracy: 2.2727%
+<pre>Test accuracy: 1.9139%
 </pre>
 </div>
 </div>
